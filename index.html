@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="wrapper">
+      <div class="hex-color-container">
+        <p class="hex-color-code">#ffff</p>
+        <button>Create Hex Color</button>
+      </div>
+      <div class="rgb-color-container">
+        <p class="rgb-color-code">rgb(211,333,444)</p>
+        <div>
+          <label for="red">Red</label>
+          <input type="range" min="0" max="255" value="0" id="red" />
+        </div>
+        <div>
+          <label for="green">Green</label>
+          <input type="range" min="0" max="255" value="0" id="green" />
+        </div>
+        <div>
+          <label for="blue">Blue</label>
+          <input type="range" min="0" max="255" value="0" id="blue" />
+        </div>
+      </div>
+    </div>
+
     <script src="./index.js"></script>
   </body>
 </html>
