@@ -53,7 +53,7 @@ body {
   color: white;
 }
 
-.rgb-btn {
+.rgb-color-container button {
   padding: 10px 20px;
   cursor: pointer;
   font-size: 17px;
