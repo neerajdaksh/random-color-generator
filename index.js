@@ -3,25 +3,19 @@ const hexCodeCopyBtn = document.querySelector(".hex-color-copy-btn");
 const hexColorCode = document.querySelector(".hex-color-code");
 const hexColorContainer = document.querySelector(".hex-color-container");
 
-
 hexColorBtn.addEventListener("click", () => {
     generateHexColor();
-
 });
-
-
 
 // generate random number
 function generateRandomNumber(length) {
     return Math.floor(Math.random() * length);
 }
 
-
-
-
 //generate hex color function
 const generateHexColor = () => {
-    const hexValue = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+    const hexValue = "0123456789abcdef";
+
     let hexCode = "#";
     for (let i = 0; i <= 5; i++) {
         hexCode += hexValue[generateRandomNumber(hexValue.length)];
@@ -31,7 +25,6 @@ const generateHexColor = () => {
     hexColorBtn.style.color = `${hexCode}`;
 };
 
-
 // hex color copy function
 function copyHexColorClipboard() {
     navigator.clipboard.writeText(hexColorCode.textContent);
@@ -39,7 +32,6 @@ function copyHexColorClipboard() {
 }
 
 hexCodeCopyBtn.addEventListener("click", copyHexColorClipboard);
-
 
 // rgb color generator
 const rgbBtn = document.querySelector(".rgb-btn");
@@ -58,9 +50,6 @@ function rgbColorGenerator() {
     rgbColorCode.innerHTML = `rgb(${red}, ${green}, ${blue})`;
     rgbColorContainer.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     rgbBtn.style.color = `rgb(${red}, ${green}, ${blue})`;
-
-
-
 }
 rgbBtn.addEventListener("click", rgbColorGenerator);
 
@@ -68,7 +57,6 @@ rgbBtn.addEventListener("click", rgbColorGenerator);
 function copyRgbColorClipboard() {
     navigator.clipboard.writeText(rgbColorCode.textContent);
     alert("RGB Color is Copied To Clipboard");
-
 }
 
 rbgCopyBtn.addEventListener("click", copyRgbColorClipboard);
