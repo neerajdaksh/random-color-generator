@@ -52,3 +52,10 @@ body {
   font-weight: bold;
   color: white;
 }
+
+.rgb-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+}

@@ -38,3 +38,5 @@ function copyHexColor() {
 }
 
 hexCodeCopyBtn.addEventListener("click", copyHexColor);
+
+
